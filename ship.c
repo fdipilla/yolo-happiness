@@ -89,7 +89,7 @@ void  dubujarBarraEstado() {
     len = LEN(string);
     
     
-    init_pair(1, COLOR_BLACK, COLOR_RED);
+    init_pair(1, COLOR_RED, COLOR_RED);
     
     
     start_color();
