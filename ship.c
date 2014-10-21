@@ -18,12 +18,7 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <time.h>
-
-
-typedef struct _objeto {
-    int x, y, ancho, alto, speed;
-    char hechoDe;
-} objeto;
+#include "ship.h"
 
 int alturaMaxima, anchoMaximo, posicionJugador;
 
@@ -34,6 +29,8 @@ int numeroInvasores;
 objeto *invasores;
 
 int vidas, puntos, invasoresSiguienteNivel, nivel;
+
+#include "menu.h"
 
 int LEN(const char *str){
     const char *s;
@@ -68,7 +65,7 @@ void dibujarJugador( int x ){
         ,"   --\n"
     };
     
-    for (i = 0; i< 3; i++){
+    for (i = 0; i < (sizeof(nave)/sizeof(nave[0])) ; i++){
         y = (anchoMaximo - 6);
         while (*nave[i]){
             draw(*nave[i], x + i, y++);
@@ -89,7 +86,7 @@ void  dubujarBarraEstado() {
     len = LEN(string);
     
     
-    init_pair(1, COLOR_RED, COLOR_RED);
+    init_pair(1, COLOR_BLACK, COLOR_RED);
     
     
     start_color();
@@ -97,7 +94,7 @@ void  dubujarBarraEstado() {
     for (i = 0; i < vidas; i++) {
         attron(COLOR_PAIR(1));
         
-        dibujarString("#", 0, ++len);
+        dibujarString(" ", 0, ++len);
         attroff(COLOR_PAIR(1));
         
         dibujarString(" ", 0, ++len);
@@ -217,6 +214,9 @@ void *repetir () {
     
 }
 
+
+
+
 int main (){
     char tecla;
     int i;
@@ -240,6 +240,8 @@ int main (){
     clear();
     refresh();
     
+    menu();
+
     posicionJugador = alturaMaxima / 2;
     
     balasSimultaneas = 10;
@@ -254,12 +256,13 @@ int main (){
         balas[i].hechoDe = '-';
     }
     
+    
     numeroInvasores = 5;
     invasores = malloc(numeroInvasores * sizeof(objeto));
     for(i = 0; i < numeroInvasores; i++){
         dibujarInvasor(&invasores[i]);
     }
-    
+
     
     pthread_t pth;
     pthread_create(&pth, NULL, repetir, "dibujar");
@@ -291,5 +294,4 @@ int main (){
     endwin();
 
 }
-
 
