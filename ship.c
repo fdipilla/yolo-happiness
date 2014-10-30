@@ -273,7 +273,7 @@ int main (){
         if (tecla == 'j') posicionJugador++;
         if (tecla == 'k') posicionJugador--;
         
-        if (tecla == ' ') {
+        if (tecla == 'a') {
             for ( i = 0; i < balasSimultaneas; i++){
                 if (!balas[i].speed){
                     balas[i].x = posicionJugador;
