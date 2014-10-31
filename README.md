@@ -3,7 +3,7 @@ yolo-happiness
 
 Un space shooter basico usando ncurses.
 
-Los controles son 'J' para subir, 'K' para bajar y 'Espacio' para disparar.
+Los controles son 'J' para subir, 'K' para bajar y 'A' para disparar.
 
 
 Para compilar en Debian hacen falta estos paquetes:
