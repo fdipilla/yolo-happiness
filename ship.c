@@ -30,6 +30,8 @@ objeto *invasores;
 
 int vidas, puntos, invasoresSiguienteNivel, nivel;
 
+WINDOW *ventana;
+
 #include "menu.h"
 
 int LEN(const char *str){
@@ -43,9 +45,7 @@ int LEN(const char *str){
 void draw(char dc, int x, int y){
     if ( x > alturaMaxima || y > anchoMaximo) return;
     
-    move(x,y);
-    delch();
-    insch(dc);
+    mvwaddch(ventana, x, y, dc);
     refresh();
 }
 
@@ -220,7 +220,7 @@ void *repetir () {
 int main (){
     char tecla;
     int i;
-    WINDOW *ventana;
+
     
     vidas = 3;
     invasoresSiguienteNivel = 25;
