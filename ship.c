@@ -19,19 +19,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "ship.h"
-
-int alturaMaxima, anchoMaximo, posicionJugador;
-
-int balasSimultaneas;
-objeto *balas;
-
-int numeroInvasores;
-objeto *invasores;
-
-int vidas, puntos, invasoresSiguienteNivel, nivel;
-
-WINDOW *ventana;
-
+#include "globals.h"
 #include "menu.h"
 
 int LEN(const char *str){
