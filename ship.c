@@ -77,8 +77,6 @@ void  dubujarBarraEstado() {
     init_pair(1, COLOR_BLACK, COLOR_RED);
     
     
-    start_color();
-    
     for (i = 0; i < vidas; i++) {
         attron(COLOR_PAIR(1));
         
@@ -219,6 +217,8 @@ int main (){
     srand(time(NULL));
     
     ventana = initscr();
+    
+    start_color();
     
     cbreak();
     noecho();
