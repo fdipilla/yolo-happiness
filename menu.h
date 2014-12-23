@@ -15,13 +15,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "menu.c"
+#include "globals.h"
 
-
-void dibujarInto();
-void dibujar(char *[], int, int , int );
-void dubijarLogo();
-void dibujarAyuda();
-void dibujarControles();
-void dubijarInto();
+static void dibujarInto();
+static void dibujar_array(char *[], int, int , int );
+static void dubijarLogo();
+static void dibujarAyuda();
+static void dibujarControles();
+static void dubijarInto();
 void menu ();

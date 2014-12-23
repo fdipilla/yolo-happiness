@@ -15,14 +15,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "menu.h"
 
-static void dibujar(char *que[], int cuantoMide, int x, int y) {
+static void dibujar_array(char *que[], int cuantoMide, int x, int y) {
     int i,y_secundaria;
     
     for (i = 0; i < cuantoMide ; i++){
         y_secundaria = y;
         while (*que[i]){
-            draw(*que[i], x + i, y_secundaria++);
+            dibujar(*que[i], x + i, y_secundaria++);
             que[i]++;
         }
     }
@@ -47,7 +48,7 @@ static void dubijarLogo() {
     y = (anchoMaximo / 2) - LEN(yolo_happiness[0]) / 2;
     x = alturaMaxima / 2;
     
-    dibujar(yolo_happiness, altoLogo, x,y);
+    dibujar_array(yolo_happiness, altoLogo, x,y);
 }
 
 
@@ -62,7 +63,7 @@ static void dibujarAyuda() {
     y = (anchoMaximo / 2) - LEN(ayuda[0]) / 2;
     x = (alturaMaxima / 2) - 5 ;
     
-    dibujar(ayuda, altoTexto, x, y);
+    dibujar_array(ayuda, altoTexto, x, y);
 }
 
 static void dibujarControles() {
@@ -76,7 +77,7 @@ static void dibujarControles() {
     y = (anchoMaximo / 2) - LEN(ayuda[0]) / 2;
     x = (alturaMaxima / 2) + 10 ;
     
-    dibujar(ayuda, altoTexto, x, y);
+    dibujar_array(ayuda, altoTexto, x, y);
 }
 
 

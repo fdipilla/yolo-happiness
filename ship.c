@@ -20,7 +20,7 @@
 #include <time.h>
 #include "ship.h"
 #include "globals.h"
-#include "menu.h"
+
 
 int LEN(const char *str){
     const char *s;
@@ -30,7 +30,7 @@ int LEN(const char *str){
 }
 
 
-void draw(char dc, int x, int y){
+void dibujar(char dc, int x, int y){
     if ( x > alturaMaxima || y > anchoMaximo) return;
     
     mvwaddch(ventana, x, y, dc);
@@ -41,7 +41,7 @@ void draw(char dc, int x, int y){
 void dibujarString(char *string, int x, int y){
     int i;
     for (i = 0;i < LEN(string); i++)
-        draw(string[i], x, y + i);
+        dibujar(string[i], x, y + i);
 }
 
 void dibujarJugador( int x ){
@@ -56,7 +56,7 @@ void dibujarJugador( int x ){
     for (i = 0; i < (sizeof(nave)/sizeof(nave[0])) ; i++){
         y = (anchoMaximo - 6);
         while (*nave[i]){
-            draw(*nave[i], x + i, y++);
+            dibujar(*nave[i], x + i, y++);
             nave[i]++;
         }
     }
@@ -94,7 +94,7 @@ void dibujarObjeto(objeto o) {
     int r, c;
     for ( r = o.x; r < o.x + o.alto; r++){
         for (c = o.y; c < o.y + o.ancho; c++){
-            draw(o.hechoDe, r, c);
+            dibujar(o.hechoDe, r, c);
         }
     }
 }
@@ -177,7 +177,7 @@ void *repetir () {
             int r, c;
             for (r = 0; r < alturaMaxima; r++)
                 for (c = 0; c < anchoMaximo; c++)
-                    draw('~', r,c);
+                    dibujar('~', r,c);
             
             dibujarString("Siguente nivel: ", alturaMaxima / 2, anchoMaximo / 2 - 5);
             

@@ -1,6 +1,6 @@
 game:
-	gcc ship.c -o ship -lcurses -lpthread
+	gcc ship.c menu.c globals.h -o ship -lcurses -lpthread
 clean:
 	rm ship
 debug:
-	gcc ship.c -o ship -lcurses -lpthread -g
+	gcc ship.c menu.c globals.h -o ship -lcurses -lpthread -g

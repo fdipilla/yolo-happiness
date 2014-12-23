@@ -15,25 +15,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-typedef struct _objeto {
-    int x, y, ancho, alto, speed;
-    char hechoDe;
-} objeto;
+
+typedef struct _objeto objeto;
 
 int LEN(const char *);
-
-void draw(char, int, int);
-
-void dibujarString(char *, int , int );
-
-void dibujarJugador(int);
-
-void  dubujarBarraEstado();
-
-void dibujarObjeto(objeto);
-
-void dibujarInvasor( objeto *);
-
 int seLaPuso(objeto , objeto );
 
+void dibujar(char, int, int);
+void dibujarString(char *, int , int );
+void dibujarJugador(int);
+void dubujarBarraEstado();
+void dibujarObjeto(objeto);
+void dibujarInvasor( objeto *);
 void *repetir ();

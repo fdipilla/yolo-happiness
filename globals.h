@@ -20,6 +20,17 @@
  * No solo uso globles, sino que tengo un archivo lleno de ellas.
  */
 
+#include <curses.h>
+
+typedef struct _objeto {
+    int x, y, ancho, alto, speed;
+    char hechoDe;
+} objeto;
+
+
+#ifndef GAME_GLOBALS
+#define GAME_GLOBALS
+
 int alturaMaxima, anchoMaximo, posicionJugador;
 
 int balasSimultaneas;
@@ -31,3 +42,9 @@ objeto *invasores;
 int vidas, puntos, invasoresSiguienteNivel, nivel;
 
 WINDOW *ventana;
+
+#endif
+
+
+
+
