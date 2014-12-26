@@ -15,37 +15,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-/*
- * No solo uso globles, sino que tengo un archivo lleno de ellas.
- */
-
+#include "colores.h"
 #include <curses.h>
 
-typedef struct _objeto {
-    int x, y, ancho, alto, speed;
-    char hechoDe;
-    int color;
-} objeto;
-
-
-#ifndef GAME_GLOBALS
-#define GAME_GLOBALS
-
-int alturaMaxima, anchoMaximo, posicionJugador;
-
-int balasSimultaneas;
-objeto *balas;
-
-int numeroInvasores;
-objeto *invasores;
-
-int vidas, puntos, invasoresSiguienteNivel, nivel;
-
-WINDOW *ventana;
-
-#endif
-
-
+void inicializar_colores () 
+{
+    init_pair(COLOR_ROJO, COLOR_RED, COLOR_BLACK);
+    init_pair(COLOR_ROJO_VIDAS, COLOR_BLACK, COLOR_RED);
+}
 
 
