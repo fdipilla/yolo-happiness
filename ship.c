@@ -20,7 +20,7 @@
 #include <time.h>
 #include "ship.h"
 #include "globals.h"
-
+#include "colores.h"
 
 int LEN(const char *str){
     const char *s;
@@ -74,14 +74,12 @@ void  dubujarBarraEstado() {
     len = LEN(string);
     
     
-    init_pair(1, COLOR_BLACK, COLOR_RED);
-    
-    
     for (i = 0; i < vidas; i++) {
-        attron(COLOR_PAIR(1));
-        
+        attron(ROJO_VIDAS);
+            
         dibujarString(" ", 0, ++len);
-        attroff(COLOR_PAIR(1));
+        
+        attroff(ROJO_VIDAS);
         
         dibujarString(" ", 0, ++len);
         
@@ -92,11 +90,13 @@ void  dubujarBarraEstado() {
 
 void dibujarObjeto(objeto o) {
     int r, c;
+    attron(o.color);
     for ( r = o.x; r < o.x + o.alto; r++){
         for (c = o.y; c < o.y + o.ancho; c++){
             dibujar(o.hechoDe, r, c);
         }
     }
+    attroff(o.color);
 }
 
 void dibujarInvasor(struct _objeto *invasor){
@@ -106,6 +106,7 @@ void dibujarInvasor(struct _objeto *invasor){
     (*invasor).hechoDe = 'I';
     (*invasor).x = rand() % alturaMaxima;
     (*invasor).y = -2;
+    (*invasor).color = 0;
 }
 
 int seLaPuso(objeto a, objeto b){
@@ -220,6 +221,8 @@ int main (){
     
     start_color();
     
+    inicializar_colores();
+    
     cbreak();
     noecho();
     curs_set(0);
@@ -242,6 +245,7 @@ int main (){
         balas[i].alto = 1;
         balas[i].speed = 0;
         balas[i].hechoDe = '-';
+        balas[i].color = ROJO;
     }
     
     
@@ -270,6 +274,7 @@ int main (){
                     balas[i].alto = 1;
                     balas[i].speed = 3;
                     balas[i].hechoDe = '-';
+                    balas[i].color = ROJO;
                     break;
                 }
             }
