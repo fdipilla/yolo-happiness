@@ -56,7 +56,7 @@ static void dibujarAyuda() {
     int i,y,x,y_secundaria;
     int altoTexto;
     
-    char *ayuda[1] = { " Presione 'q' para iniciar el juego" };
+    char *ayuda[1] = { " Presione 's' para iniciar el juego" };
     
     altoTexto = sizeof(ayuda)/sizeof(ayuda[0]);
     
@@ -96,6 +96,6 @@ void menu () {
     
     dubijarInto();
     
-    while ((tecla = getch()) != 'q') { ; }
+    while ((tecla = getch()) != 's') { ; }
     
 }
