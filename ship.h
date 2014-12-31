@@ -26,5 +26,5 @@ void dibujarString(char *, int , int );
 void dibujarJugador(int);
 void dubujarBarraEstado();
 void dibujarObjeto(objeto);
-void dibujarInvasor( objeto *);
+void crearInvasor( objeto *);
 void *repetir ();
