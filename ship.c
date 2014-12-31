@@ -106,7 +106,7 @@ void crearInvador(struct _objeto *invasor){
     (*invasor).hechoDe = 'I';
     (*invasor).x = rand() % alturaMaxima;
     (*invasor).y = -2;
-    (*invasor).color = 0;
+    (*invasor).color = (rand() % 2 == 0) ? ROJO : 0;
 }
 
 int seLaPuso(objeto a, objeto b){
