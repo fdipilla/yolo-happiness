@@ -99,7 +99,7 @@ void dibujarObjeto(objeto o) {
     attroff(o.color);
 }
 
-void dibujarInvasor(struct _objeto *invasor){
+void crearInvador(struct _objeto *invasor){
     (*invasor).ancho = 3;
     (*invasor).alto = 2;
     (*invasor).speed = 1;
@@ -133,7 +133,7 @@ void *repetir () {
             dibujarObjeto(invasores[i]);
             invasores[i].y += invasores[i].speed;
             if (invasores[i].y > anchoMaximo){
-                dibujarInvasor(&invasores[i]);
+                crearInvador(&invasores[i]);
                 vidas--;
             }
             
@@ -141,7 +141,7 @@ void *repetir () {
             int j;
             for (j = 0; j < balasSimultaneas; j++){
                 if (balas[j].speed && seLaPuso(invasores[i], balas[j])){
-                    dibujarInvasor(&invasores[i]);
+                    crearInvador(&invasores[i]);
                     balas[j].speed = balas[j].y = 0;
                     puntos++;
                 }
@@ -172,7 +172,7 @@ void *repetir () {
             invasores = realloc(invasores, numeroInvasores * sizeof(objeto));
             
             for (i = 0; i < numeroInvasores; i++){
-                dibujarInvasor(&invasores[i]);
+                crearInvador(&invasores[i]);
             }
             
             int r, c;
@@ -252,7 +252,7 @@ int main (){
     numeroInvasores = 5;
     invasores = malloc(numeroInvasores * sizeof(objeto));
     for(i = 0; i < numeroInvasores; i++){
-        dibujarInvasor(&invasores[i]);
+        crearInvador(&invasores[i]);
     }
 
     
