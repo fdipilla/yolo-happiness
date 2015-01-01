@@ -99,6 +99,14 @@ void menu () {
     
     dubijarInto();
     
-    while ((tecla = getch()) != 's') { ; }
+    while (tecla = getch()) {
+        
+        if (tecla == 'q') {
+            salir();
+        } else if (tecla == 's') {
+            return;
+        }
+        
+    }
     
 }

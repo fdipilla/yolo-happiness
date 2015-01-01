@@ -337,4 +337,5 @@ int main (){
 
 void salir() {
     endwin();
+    exit(0);
 }
