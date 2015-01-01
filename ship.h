@@ -28,3 +28,4 @@ void dubujarBarraEstado();
 void dibujarObjeto(objeto);
 void crearInvasor( objeto *);
 void *repetir ();
+int colorRandom();
