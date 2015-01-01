@@ -106,13 +106,14 @@ void crearInvador(struct _objeto *invasor){
     (*invasor).hechoDe = 'I';
     (*invasor).x = rand() % alturaMaxima;
     (*invasor).y = -2;
-    (*invasor).color = (rand() % 2 == 0) ? ROJO : 0;
+    (*invasor).color = (rand() % 2 == 0) ? ROJO : AZUL;
 }
 
 int seLaPuso(objeto a, objeto b){
     if (
         ( (b.y >= a.y && b.y <= a.y + a.ancho) || (a.y >= b.y && a.y <= b.y + b.ancho)) &&
-        ( (b.x >= a.x && b.x <= a.x + a.alto) || (a.x >= b.x && a.x <= b.x + b.alto))
+        ( (b.x >= a.x && b.x <= a.x + a.alto) || (a.x >= b.x && a.x <= b.x + b.alto)) &&
+        ( a.color == b.color )
         ) return 1;
     return 0;
 }
@@ -275,6 +276,20 @@ int main (){
                     balas[i].speed = 3;
                     balas[i].hechoDe = '-';
                     balas[i].color = ROJO;
+                    break;
+                }
+            }
+        }
+        if (tecla == 's') {
+            for ( i = 0; i < balasSimultaneas; i++){
+                if (!balas[i].speed){
+                    balas[i].x = posicionJugador;
+                    balas[i].y = anchoMaximo;
+                    balas[i].ancho = 4;
+                    balas[i].alto = 1;
+                    balas[i].speed = 3;
+                    balas[i].hechoDe = '-';
+                    balas[i].color = AZUL;
                     break;
                 }
             }

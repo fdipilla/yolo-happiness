@@ -22,6 +22,8 @@ void inicializar_colores ()
 {
     init_pair(COLOR_ROJO, COLOR_RED, COLOR_BLACK);
     init_pair(COLOR_ROJO_VIDAS, COLOR_BLACK, COLOR_RED);
+    init_pair(COLOR_AZUL, COLOR_BLUE, COLOR_BLACK);
+    
 }
 
 
