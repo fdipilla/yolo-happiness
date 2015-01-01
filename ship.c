@@ -280,6 +280,20 @@ int main (){
                 }
             }
         }
+        if (tecla == 's') {
+            for ( i = 0; i < balasSimultaneas; i++){
+                if (!balas[i].speed){
+                    balas[i].x = posicionJugador;
+                    balas[i].y = anchoMaximo;
+                    balas[i].ancho = 4;
+                    balas[i].alto = 1;
+                    balas[i].speed = 3;
+                    balas[i].hechoDe = '-';
+                    balas[i].color = 0;
+                    break;
+                }
+            }
+        }
         if (posicionJugador > alturaMaxima - 1) posicionJugador = alturaMaxima - 1;
         if (posicionJugador < 0) posicionJugador = 0;
         
