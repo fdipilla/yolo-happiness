@@ -70,7 +70,10 @@ static void dibujarControles() {
     int i,y,x,y_secundaria;
     int altoTexto;
     
-    char *ayuda[1] = { " Presione 'J' para ir para arriba, 'K' para ir para abajo y 'A' para disparar" };
+    char *ayuda[2] = {
+        " Presione 'J' para ir para arriba, 'K' para ir para abajo y 'A' para disparar rojo\n"
+        ,"                'S' para disparar azul y 'D' para disparar verde"
+    };
     
     altoTexto = sizeof(ayuda)/sizeof(ayuda[0]);
     
