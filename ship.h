@@ -29,3 +29,4 @@ void dibujarObjeto(objeto);
 void crearInvasor( objeto *);
 void *repetir ();
 int colorRandom();
+void salir();

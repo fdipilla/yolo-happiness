@@ -329,7 +329,12 @@ int main (){
         
     }
     
-    endwin();
+    
+    salir();
 
 }
 
+
+void salir() {
+    endwin();
+}
