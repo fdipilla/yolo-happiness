@@ -99,6 +99,22 @@ void dibujarObjeto(objeto o) {
     attroff(o.color);
 }
 
+
+int colorRandom() {
+    switch (rand() % 3) {
+    case 0:
+        return ROJO;
+        break;
+    case 1:
+        return AZUL;
+        break;
+    default:
+        return VERDE;
+        break;
+    }
+}
+
+
 void crearInvador(struct _objeto *invasor){
     (*invasor).ancho = 3;
     (*invasor).alto = 2;
@@ -106,7 +122,7 @@ void crearInvador(struct _objeto *invasor){
     (*invasor).hechoDe = 'I';
     (*invasor).x = rand() % alturaMaxima;
     (*invasor).y = -2;
-    (*invasor).color = (rand() % 2 == 0) ? ROJO : AZUL;
+    (*invasor).color = colorRandom();
 }
 
 int seLaPuso(objeto a, objeto b){
@@ -290,6 +306,20 @@ int main (){
                     balas[i].speed = 3;
                     balas[i].hechoDe = '-';
                     balas[i].color = AZUL;
+                    break;
+                }
+            }
+        }
+        if (tecla == 'd') {
+            for ( i = 0; i < balasSimultaneas; i++){
+                if (!balas[i].speed){
+                    balas[i].x = posicionJugador;
+                    balas[i].y = anchoMaximo;
+                    balas[i].ancho = 4;
+                    balas[i].alto = 1;
+                    balas[i].speed = 3;
+                    balas[i].hechoDe = '-';
+                    balas[i].color = VERDE;
                     break;
                 }
             }
