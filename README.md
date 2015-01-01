@@ -12,7 +12,7 @@ Trato que en el branch master siempre haya una version jugable del juego.
 ####Uso
 Los controles son **J** para subir y **K** para bajar.
 
-Para disparar podes usar **A** que va a disparar un misil rojo o **S** que va a disparar un misil azul.
+Para disparar podes usar **A** que va a disparar un misil rojo,  **S** que va a disparar un misil azul y  **D** que va a disparar un misil verde.
 
 Los enemigos son de dos colores y solo pueden ser disparados si se les dispara con un misil del mismo color.
 
