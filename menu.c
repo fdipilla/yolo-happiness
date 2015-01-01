@@ -56,7 +56,7 @@ static void dibujarAyuda() {
     int i,y,x,y_secundaria;
     int altoTexto;
     
-    char *ayuda[1] = { " Presione 's' para iniciar el juego" };
+    char *ayuda[1] = { " Presione 's' para iniciar el juego, 'q' para salir" };
     
     altoTexto = sizeof(ayuda)/sizeof(ayuda[0]);
     
