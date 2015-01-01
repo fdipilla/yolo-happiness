@@ -112,7 +112,8 @@ void crearInvador(struct _objeto *invasor){
 int seLaPuso(objeto a, objeto b){
     if (
         ( (b.y >= a.y && b.y <= a.y + a.ancho) || (a.y >= b.y && a.y <= b.y + b.ancho)) &&
-        ( (b.x >= a.x && b.x <= a.x + a.alto) || (a.x >= b.x && a.x <= b.x + b.alto))
+        ( (b.x >= a.x && b.x <= a.x + a.alto) || (a.x >= b.x && a.x <= b.x + b.alto)) &&
+        ( a.color == b.color )
         ) return 1;
     return 0;
 }
