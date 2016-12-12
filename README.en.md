@@ -1,16 +1,16 @@
 yolo-happiness
 ==============
 
-Un space shooter basico usando ncurses.
+Basic space shooter using ncurses.
 
-####Estado
-:large_orange_diamond: : en desarrollo.
+####Status
+:large_orange_diamond: : under development.
 
-Trato que en el branch master siempre haya una version jugable del juego.
+On the master branh should always be a playable version of the game.
 
 
-####Uso
-Los controles son **J** para subir y **K** para bajar.
+####Usange
+Use **J** for going UP and **K** for going DOWN
 
 Para disparar podes usar **A** que va a disparar un misil rojo,  **S** que va a disparar un misil azul y  **D** que va a disparar un misil verde.
 
