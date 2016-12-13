@@ -12,16 +12,16 @@ On the master branh should always be a playable version of the game.
 ####Usange
 Use **J** for going UP and **K** for going DOWN
 
-Para disparar podes usar **A** que va a disparar un misil rojo,  **S** que va a disparar un misil azul y  **D** que va a disparar un misil verde.
+Use **A** to shoot a red misil, **S** to shoot a blue one and **D** to shoot a green one.
 
-Los enemigos son de tres colores y solo pueden ser eliminados si se les dispara con un misil del mismo color.
+Enemies are three different colors and can only be destroyed if you shoot them whit a misil with the same color that the enemy.
 
-####Compilacion
-Para compilar en Debian hacen falta estos paquetes ncurses-devel ncurses, que se pueden instalar con:
+####Compilation
+To compile you should have ncurses, on Debian-like systems use:
 
 `# apt-get install ncurses-devel ncurses`
 
-Despues con un `make` salis andando
+Then run `make` and you are ready to go.
 
 
 ####Screenshots
@@ -29,5 +29,5 @@ Despues con un `make` salis andando
 
 ![ScreenShot](/screenshot-2.png)
 
-####Agradecimientos
-[Cristian Cabrera](https://github.com/surrealcristian/) quien tuvo la idea de los distintos colores de disparos/objetivos.
+####Thanks
+[Cristian Cabrera](https://github.com/surrealcristian/) who have the idea of having diferent enemies colors and misils.
