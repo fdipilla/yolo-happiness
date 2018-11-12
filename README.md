@@ -1,6 +1,8 @@
 yolo-happiness
 ==============
 
+Existe una version de este documento en [español](https://github.com/fdipilla/yolo-happiness/blob/master/README.es.md)
+
 Basic space shooter using ncurses.
 
 #### Status
