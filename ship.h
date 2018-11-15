@@ -15,14 +15,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
+#ifndef SHIP_H
+#define SHIP_H
 typedef struct _objeto objeto;
 
 int LEN(const char *);
 int seLaPuso(objeto , objeto );
 
 void dibujar(char, int, int);
-void dibujarString(char *, int , int );
+void dibujarString(char *, int , int);
 void dibujarJugador(int);
 void dubujarBarraEstado();
 void dibujarObjeto(objeto);
@@ -30,3 +31,5 @@ void crearInvasor( objeto *);
 void *repetir ();
 int colorRandom();
 void salir();
+
+#endif

@@ -22,12 +22,14 @@
 
 #include <curses.h>
 
+#ifndef GLOBALS_H
+#define GLOBALS_H
 typedef struct _objeto {
     int x, y, ancho, alto, speed;
     char hechoDe;
     int color;
 } objeto;
-
+#endif
 
 #ifndef GAME_GLOBALS
 #define GAME_GLOBALS

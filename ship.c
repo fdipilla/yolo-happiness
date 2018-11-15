@@ -21,6 +21,7 @@
 #include "ship.h"
 #include "globals.h"
 #include "colores.h"
+#include "menu.h"
 
 int LEN(const char *str){
     const char *s;

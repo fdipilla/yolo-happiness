@@ -16,11 +16,16 @@
  */
 
 #include "globals.h"
+#include "ship.h"
 
+#ifndef MENU_H
+#define MENU_H
 static void dibujarInto();
 static void dibujar_array(char *[], int, int , int );
 static void dubijarLogo();
 static void dibujarAyuda();
 static void dibujarControles();
 static void dubijarInto();
-void menu ();
+
+void menu();
+#endif

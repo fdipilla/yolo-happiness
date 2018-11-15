@@ -28,4 +28,6 @@
 #define AZUL COLOR_PAIR(COLOR_AZUL)
 #define VERDE COLOR_PAIR(COLOR_VERDE)
 
+void inicializar_colores();
+
 #endif
