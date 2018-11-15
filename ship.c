@@ -65,7 +65,7 @@ void dibujarJugador( int x ){
 
 
 void  dubujarBarraEstado() {
-    char string[10] = {'\0'};
+    char string[20] = {'\0'};
     int i, len;
     
     sprintf(string, "Puntos: %i Vidas: ", puntos );
