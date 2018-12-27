@@ -23,6 +23,10 @@ To compile you should have ncurses, on Debian-like systems use:
 
 `# apt-get install ncurses-devel ncurses`
 
+Or in some cases:
+
+`# apt-get install libncurses5-dev`
+
 Then run `make` and you are ready to go.
 
 
