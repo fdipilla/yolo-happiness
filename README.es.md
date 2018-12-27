@@ -21,6 +21,10 @@ Para compilar en Debian hacen falta estos paquetes ncurses-devel ncurses, que se
 
 `# apt-get install ncurses-devel ncurses`
 
+O en algunos sistemas tambien  puede ser:
+
+`# apt-get install libncurses5-dev`
+
 Despues con un `make` salis andando
 
 
