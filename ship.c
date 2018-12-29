@@ -280,8 +280,8 @@ int main (){
     while (1) {
         tecla = getch();
         if (tecla == 'q') break;
-        if (tecla == 'j') posicionJugador++;
-        if (tecla == 'k') posicionJugador--;
+        if (tecla == 'j') posicionJugador = posicionJugador + 2;
+        if (tecla == 'k') posicionJugador = posicionJugador - 2;
         
         if (tecla == 'a') {
             for ( i = 0; i < balasSimultaneas; i++){
